@@ -15,6 +15,7 @@ class Adapter(private val itemsList: List<ItemLayoutModel>): RecyclerView.Adapte
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        //we need to create variable first to store our data from model class into imageview and textview
         val itemLayoutModel = itemsList[position]
         holder.ivDemo.setImageResource(itemLayoutModel.image)
         holder.tvDemo.text = itemLayoutModel.text
